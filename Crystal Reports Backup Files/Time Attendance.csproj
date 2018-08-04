@@ -1,0 +1,736 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B5EED6B0-747B-4EEF-A02D-1380BDFB6E1B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Time_Attendance</RootNamespace>
+    <AssemblyName>Time Attendance</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="EnhancedGlassButton, Version=1.0.2628.26427, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Mohammed Adel\Old\TimeAttendance 12-4-2010\TimeAttendance\TimeAttendance\TimeAttendance\bin\Debug\EnhancedGlassButton.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics4.Shared.v15.1, Version=15.1.20151.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\Program Files\2015.1\Windows Forms\CLR4.0\Bin\Infragistics4.Shared.v15.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics4.Win.AppStylistSupport.v15.1, Version=15.1.20151.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\Program Files\2015.1\Windows Forms\CLR4.0\Bin\Infragistics4.Win.AppStylistSupport.v15.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics4.Win.Misc.v15.1, Version=15.1.20151.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\Program Files\2015.1\Windows Forms\CLR4.0\Bin\Infragistics4.Win.Misc.v15.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics4.Win.UltraWinDock.v15.1, Version=15.1.20151.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\Program Files\2015.1\Windows Forms\CLR4.0\Bin\Infragistics4.Win.UltraWinDock.v15.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics4.Win.UltraWinEditors.v15.1, Version=15.1.20151.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\Program Files\2015.1\Windows Forms\CLR4.0\Bin\Infragistics4.Win.UltraWinEditors.v15.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics4.Win.UltraWinGrid.v15.1, Version=15.1.20151.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\Program Files\2015.1\Windows Forms\CLR4.0\Bin\Infragistics4.Win.UltraWinGrid.v15.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics4.Win.UltraWinListView.v15.1, Version=15.1.20151.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\Program Files\2015.1\Windows Forms\CLR4.0\Bin\Infragistics4.Win.UltraWinListView.v15.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics4.Win.UltraWinSpellChecker.v15.1, Version=15.1.20151.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\Program Files\2015.1\Windows Forms\CLR4.0\Bin\Infragistics4.Win.UltraWinSpellChecker.v15.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics4.Win.UltraWinTabbedMdi.v15.1, Version=15.1.20151.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\Program Files\2015.1\Windows Forms\CLR4.0\Bin\Infragistics4.Win.UltraWinTabbedMdi.v15.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics4.Win.UltraWinTabControl.v15.1, Version=15.1.20151.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\Program Files\2015.1\Windows Forms\CLR4.0\Bin\Infragistics4.Win.UltraWinTabControl.v15.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics4.Win.UltraWinToolbars.v15.1, Version=15.1.20151.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\Program Files\2015.1\Windows Forms\CLR4.0\Bin\Infragistics4.Win.UltraWinToolbars.v15.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics4.Win.UltraWinTree.v15.1, Version=15.1.20151.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\Program Files\2015.1\Windows Forms\CLR4.0\Bin\Infragistics4.Win.UltraWinTree.v15.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics4.Win.v15.1, Version=15.1.20151.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\Program Files\2015.1\Windows Forms\CLR4.0\Bin\Infragistics4.Win.v15.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Rmo, Version=9.0.242.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Windows\assembly\GAC_MSIL\System.Web.Services\2.0.0.0__b03f5f7f11d50a3a\System.Web.Services.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AllTransRpt.cs">
+      <DependentUpon>AllTransRpt.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Absence_Rpt.cs">
+      <DependentUpon>Absence_Rpt.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Attendance_Rpt.cs">
+      <DependentUpon>Attendance_Rpt.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="ADD_LOG.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ADD_LOG.Designer.cs">
+      <DependentUpon>ADD_LOG.cs</DependentUpon>
+    </Compile>
+    <Compile Include="rptCardBack_PS.cs">
+      <DependentUpon>rptCardBack_PS.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="rptCardBack.cs">
+      <DependentUpon>rptCardBack.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="rptCard.cs">
+      <DependentUpon>rptCard.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="EmpOutRpt1.cs">
+      <DependentUpon>EmpOutRpt.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="EmployeeRptALL.cs">
+      <DependentUpon>EmployeeRptALL.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="FrmStatus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmStatus.designer.cs">
+      <DependentUpon>FrmStatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPermit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPermit.designer.cs">
+      <DependentUpon>FrmPermit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeRpt2.cs">
+      <DependentUpon>EmployeeRpt2.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Copy of EmployeeRpt.cs">
+      <DependentUpon>Copy of EmployeeRpt.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="EmpTransRptWithG.cs">
+      <DependentUpon>EmpTransRptWithG.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Frm_Copy_Pic.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Copy_Pic.Designer.cs">
+      <DependentUpon>Frm_Copy_Pic.cs</DependentUpon>
+    </Compile>
+    <Compile Include="rptCardBack_PS_old.cs">
+      <DependentUpon>rptCardBack_PS_old.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="FrmChangeID.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmChangeID.Designer.cs">
+      <DependentUpon>FrmChangeID.cs</DependentUpon>
+    </Compile>
+    <Compile Include="In_COM_Rpt.cs">
+      <DependentUpon>In_COM_Rpt.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="no_Delay_SummaryRpt.cs">
+      <DependentUpon>no_Delay_SummaryRpt.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Delay_SummaryRpt.cs">
+      <DependentUpon>Delay_SummaryRpt.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Emp_Delay_Rpt.cs">
+      <DependentUpon>Emp_Delay_Rpt.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="EmpTrans_REAL_Rpt.cs">
+      <DependentUpon>EmpTrans_REAL_Rpt.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Frm_Delay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Delay.designer.cs">
+      <DependentUpon>Frm_Delay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmNowIN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmNowIN.designer.cs">
+      <DependentUpon>FrmNowIN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SummaryRpt.cs">
+      <DependentUpon>SummaryRpt.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="EmpShiftTransRpt.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EmpShiftTransRpt.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Frm_change.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_change.Designer.cs">
+      <DependentUpon>Frm_change.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmShift.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmShift.designer.cs">
+      <DependentUpon>FrmShift.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PRINT_DIALOG.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PRINT_DIALOG.Designer.cs">
+      <DependentUpon>PRINT_DIALOG.cs</DependentUpon>
+    </Compile>
+    <Compile Include="rptVisitorCard.cs">
+      <DependentUpon>rptVisitorCard.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="frmVisitor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVisitor.Designer.cs">
+      <DependentUpon>frmVisitor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="rptWorkersCard.cs">
+      <DependentUpon>rptWorkersCard.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="EmpAllTransRpt.cs">
+      <DependentUpon>EmpAllTransRpt.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="FrmAllEmpTrans.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAllEmpTrans.designer.cs">
+      <DependentUpon>FrmAllEmpTrans.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DeviceSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeviceSetting.Designer.cs">
+      <DependentUpon>DeviceSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmpTransRpt.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EmpTransRpt.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FrmDepartments.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDepartments.designer.cs">
+      <DependentUpon>FrmDepartments.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEmpMange.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEmpMange.designer.cs">
+      <DependentUpon>frmEmpMange.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmEmpTrans.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmEmpTrans.designer.cs">
+      <DependentUpon>FrmEmpTrans.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMainForm.Designer.cs">
+      <DependentUpon>frmMainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmReportViewer2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReportViewer2.Designer.cs">
+      <DependentUpon>frmReportViewer2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUsers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUsers.designer.cs">
+      <DependentUpon>frmUsers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AllTransRpt.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>AllTransRpt.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Absence_Rpt.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Absence_Rpt.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Attendance_Rpt.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Attendance_Rpt.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ADD_LOG.resx">
+      <DependentUpon>ADD_LOG.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptCardBack_PS.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptCardBack_PS.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptCardBack.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptCardBack.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptCard.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptCard.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmpOutRpt.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>EmpOutRpt1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmployeeRptALL.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>EmployeeRptALL.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmStatus.resx">
+      <DependentUpon>FrmStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPermit.resx">
+      <DependentUpon>FrmPermit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmployeeRpt2.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>EmployeeRpt2.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Copy of EmployeeRpt.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Copy of EmployeeRpt.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmpTransRptWithG.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>EmpTransRptWithG.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_change.resx">
+      <DependentUpon>Frm_change.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Copy_Pic.resx">
+      <DependentUpon>Frm_Copy_Pic.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptCardBack_PS_old.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptCardBack_PS_old.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmChangeID.resx">
+      <DependentUpon>FrmChangeID.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="In_COM_Rpt.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>In_COM_Rpt.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="no_Delay_SummaryRpt.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>no_Delay_SummaryRpt.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Delay_SummaryRpt.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Delay_SummaryRpt.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Emp_Delay_Rpt.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Emp_Delay_Rpt.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmpTrans_REAL_Rpt.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>EmpTrans_REAL_Rpt.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Delay.resx">
+      <DependentUpon>Frm_Delay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmNowIN.resx">
+      <DependentUpon>FrmNowIN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SummaryRpt.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>SummaryRpt.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmpShiftTransRpt.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>EmpShiftTransRpt.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmShift.resx">
+      <DependentUpon>FrmShift.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PRINT_DIALOG.resx">
+      <DependentUpon>PRINT_DIALOG.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptVisitorCard.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptVisitorCard.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmVisitor.resx">
+      <DependentUpon>frmVisitor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptWorkersCard.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptWorkersCard.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmpAllTransRpt.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>EmpAllTransRpt.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAllEmpTrans.resx">
+      <DependentUpon>FrmAllEmpTrans.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeviceSetting.resx">
+      <DependentUpon>DeviceSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmpTransRpt.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>EmpTransRpt.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmDepartments.resx">
+      <DependentUpon>FrmDepartments.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEmpMange.resx">
+      <DependentUpon>frmEmpMange.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmEmpTrans.resx">
+      <DependentUpon>FrmEmpTrans.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMainForm.resx">
+      <DependentUpon>frmMainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReportViewer2.resx">
+      <DependentUpon>frmReportViewer2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUsers.resx">
+      <DependentUpon>frmUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptCard_old.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptCard_old.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptCardBack_old.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptCardBack_old.cs</LastGenOutput>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Resources\Thumbs.db" />
+    <None Include="TimeAttendanceDataSet.xsc">
+      <DependentUpon>TimeAttendanceDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="TimeAttendanceDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TimeAttendanceDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TimeAttendanceDataSet.xss">
+      <DependentUpon>TimeAttendanceDataSet.xsd</DependentUpon>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="rptCard_old.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptCard_old.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptCardBack_old.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptCardBack_old.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TimeAttendanceDataSet.cs">
+      <DependentUpon>TimeAttendanceDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="TimeAttendanceDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TimeAttendanceDataSet.xsd</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\9815939001353909066.png" />
+    <Content Include="Resources\Accounting.JPG" />
+    <Content Include="Resources\Add.png" />
+    <Content Include="Resources\application.ico" />
+    <Content Include="Resources\application_enterprise_new.ico" />
+    <Content Include="Resources\back.jpg" />
+    <None Include="Resources\btnAdd.Image.png" />
+    <Content Include="Resources\businessmen.ico" />
+    <Content Include="Resources\calendar_down.ico" />
+    <Content Include="Resources\calendar_preferences.ico" />
+    <Content Include="Resources\cancel.ico" />
+    <Content Include="Resources\checkinguest.ico" />
+    <Content Include="Resources\checkinmember.ico" />
+    <Content Include="Resources\chest.ico" />
+    <None Include="Resources\chest1.ico" />
+    <Content Include="Resources\column_delete.ico" />
+    <Content Include="Resources\companies.ico" />
+    <None Include="Resources\companies1.ico" />
+    <Content Include="Resources\contract.ico" />
+    <Content Include="Resources\Copy of businessman.ico" />
+    <Content Include="Resources\Copy of column-chart.ico" />
+    <Content Include="Resources\data_edit.ico" />
+    <Content Include="Resources\data_forbidden.ico" />
+    <Content Include="Resources\date-time.ico" />
+    <None Include="Resources\date-time1.ico" />
+    <Content Include="Resources\db cancel.ico" />
+    <Content Include="Resources\db first.ico" />
+    <Content Include="Resources\db last.ico" />
+    <Content Include="Resources\db next.ico" />
+    <Content Include="Resources\db post.ico" />
+    <Content Include="Resources\db previous.ico" />
+    <Content Include="Resources\db refresh.ico" />
+    <Content Include="Resources\DELETE.png" />
+    <None Include="Resources\DELETE1.png" />
+    <Content Include="Resources\down_minus.ico" />
+    <Content Include="Resources\e.jpg" />
+    <Content Include="Resources\edit.ico" />
+    <Content Include="Resources\expireguest.ico" />
+    <Content Include="Resources\expirememer.ico" />
+    <Content Include="Resources\find.ico" />
+    <Content Include="Resources\insert bitmap.ico" />
+    <Content Include="Resources\jobs.ico" />
+    <None Include="Resources\jobs1.ico" />
+    <Content Include="Resources\line-chart.ico" />
+    <Content Include="Resources\login.ico" />
+    <Content Include="Resources\nationality.ico" />
+    <Content Include="Resources\new.ico" />
+    <Content Include="Resources\note_new.ico" />
+    <Content Include="Resources\novgu.ico" />
+    <Content Include="Resources\novmem.ico" />
+    <Content Include="Resources\private prices.ico" />
+    <Content Include="Resources\query.ico" />
+    <Content Include="Resources\rubberstamp.ico" />
+    <None Include="Resources\rubberstamp1.ico" />
+    <None Include="Resources\rubberstamp2.ico" />
+    <Content Include="Resources\save.ico" />
+    <Content Include="Resources\server_id_card.ico" />
+    <Content Include="Resources\service types.ico" />
+    <Content Include="Resources\service.ico" />
+    <Content Include="Resources\stopwatch_pause.ico" />
+    <Content Include="Resources\Time.jpg" />
+    <None Include="Resources\Time1.jpg" />
+    <Content Include="Resources\user edit.ico" />
+    <Content Include="Resources\user1_new.ico" />
+    <None Include="Resources\user1_new1.ico" />
+    <None Include="Resources\user1_new2.ico" />
+    <Content Include="Resources\Visitor1.jpg" />
+    <Content Include="Resources\Visitor2.jpg" />
+    <Content Include="Resources\Visitor3.jpg" />
+    <Content Include="Resources\Visitor4.jpg" />
+    <Content Include="Resources\Visitor5.jpg" />
+    <Content Include="Resources\Visitor6.jpg" />
+    <Content Include="Resources\Visitor7.jpg" />
+    <Content Include="Resources\Visitor8.jpg" />
+    <Content Include="Resources\Visitor9.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{967B4E0D-AD0C-4609-AB67-0FA40C0206D8}" />
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
