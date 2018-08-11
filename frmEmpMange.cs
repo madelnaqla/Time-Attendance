@@ -536,7 +536,7 @@ namespace Time_Attendance
 
                 if (dateTimePickerValid.Format == DateTimePickerFormat.Short)
                 { _cmd.Parameters.Add("@VALID_TO", SqlDbType.VarChar).Value = dateTimePickerValid.Value.ToShortDateString(); }
-                if (DTP_STATUS_DATE.Format == DateTimePickerFormat.Short)
+                 if (DTP_STATUS_DATE.Format == DateTimePickerFormat.Short)
                 { _cmd.Parameters.Add("@STATUS_DATE", SqlDbType.VarChar).Value = DTP_STATUS_DATE.Value.ToShortDateString(); }
 
                 try
@@ -714,60 +714,54 @@ namespace Time_Attendance
                 return;
             }
 
-            if (cmbDep.Text == "Support Service")
+            //if (cmbDep.Text == "Support Service")
+            //{
+            //    card.Database.Tables["EMPLOYEE_CARDS"].SetDataSource(dt);
+            //    _imageData = ReadFile(Application.StartupPath + @"\worker_card_new.bmp");
+            //    dt2.Rows[0]["PHOTO"] = _imageData;
+            //    card.Database.Tables["T_IMAGE"].SetDataSource(dt2);
+            //    card.SetParameterValue(card.Parameter_Location.ParameterFieldName, cmbLocation.SelectedItem.ToString());
+            //    //if (cmbCompany.SelectedItem.ToString() == "Other..")
+            //    //{
+            //    //    card2.SetParameterValue(card2.Parameter_Company.ParameterFieldName, textBox1.Text);
+            //    //}
+            //    //else
+            //    //{
+            //    card.SetParameterValue(card.Parameter_Company.ParameterFieldName, textBox1.Text);
+            //    //}
+            //    viewreport.crystalReportViewer1.ReportSource = card;
+            //}
+            //else
+            //{
+            //}
+
+
+            card.Database.Tables["EMPLOYEE_CARDS"].SetDataSource(dt);
+            if (cmbCompany.SelectedItem.ToString() == "IBS" || cmbCompany.SelectedItem.ToString() == "EPSCO" || cmbCompany.SelectedItem.ToString() == "Other..")
             {
-                card.Database.Tables["EMPLOYEE_CARDS"].SetDataSource(dt);
                 _imageData = ReadFile(Application.StartupPath + @"\worker_card_new.bmp");
-                dt2.Rows[0]["PHOTO"] = _imageData;
-                card.Database.Tables["T_IMAGE"].SetDataSource(dt2);
-                card.SetParameterValue(card.Parameter_Location.ParameterFieldName, cmbLocation.SelectedItem.ToString());
-                //if (cmbCompany.SelectedItem.ToString() == "Other..")
-                //{
-                //    card2.SetParameterValue(card2.Parameter_Company.ParameterFieldName, textBox1.Text);
-                //}
-                //else
-                //{
-                card.SetParameterValue(card.Parameter_Company.ParameterFieldName, textBox1.Text);
-                //}
-                viewreport.crystalReportViewer1.ReportSource = card;
+                card.DataDefinition.FormulaFields["phpc"].Text = "";
+                card.DataDefinition.FormulaFields["«·‘—ﬂ…_«·›—⁄Ê‰Ì…_··» —Ê·"].Text = "";
+
             }
             else
             {
-
-                card.Database.Tables["EMPLOYEE_CARDS"].SetDataSource(dt);
-                if (cmbCompany.SelectedItem.ToString() == "IBS" || cmbCompany.SelectedItem.ToString() == "EPSCO")
-                {
-                    _imageData = ReadFile(Application.StartupPath + @"\worker_card.bmp");
-                    card.DataDefinition.FormulaFields["phpc"].Text = "";
-                    card.DataDefinition.FormulaFields["«·‘—ﬂ…_«·›—⁄Ê‰Ì…_··» —Ê·"].Text = "";
-                    
-                }
-                else if (cmbCompany.SelectedItem.ToString() == "Other..")
-                {
-
-                    _imageData = ReadFile(Application.StartupPath + @"\worker_card.bmp");
-                    card.DataDefinition.FormulaFields["phpc"].Text = "";
-                    card.DataDefinition.FormulaFields["«·‘—ﬂ…_«·›—⁄Ê‰Ì…_··» —Ê·"].Text = "";
-                }
-                else
-                {
-                    _imageData = ReadFile(Application.StartupPath + @"\card.bmp");
-                }
-
-                dt2.Rows[0]["PHOTO"] = _imageData;
-                card.Database.Tables["T_IMAGE"].SetDataSource(dt2);
-                card.SetParameterValue(card2.Parameter_Location.ParameterFieldName, cmbLocation.SelectedItem.ToString());
-                if (cmbCompany.SelectedItem.ToString() == "Other..")
-                {                    
-                    
-                    card.SetParameterValue(card2.Parameter_Company.ParameterFieldName, textBox1.Text);
-                }
-                else
-                {
-                    card.SetParameterValue(card.Parameter_Company.ParameterFieldName, cmbCompany.SelectedItem.ToString());
-                }
-                viewreport.crystalReportViewer1.ReportSource = card;
+                _imageData = ReadFile(Application.StartupPath + @"\card.bmp");
             }
+
+            dt2.Rows[0]["PHOTO"] = _imageData;
+            card.Database.Tables["T_IMAGE"].SetDataSource(dt2);
+            card.SetParameterValue(card2.Parameter_Location.ParameterFieldName, cmbLocation.SelectedItem.ToString());
+            if (cmbCompany.SelectedItem.ToString() == "Other..")
+            {
+
+                card.SetParameterValue(card2.Parameter_Company.ParameterFieldName, textBox1.Text);
+            }
+            else
+            {
+                card.SetParameterValue(card.Parameter_Company.ParameterFieldName, cmbCompany.SelectedItem.ToString());
+            }
+            viewreport.crystalReportViewer1.ReportSource = card;
             viewreport.ShowDialog();
             //card.PrintOptions.PrinterName = _cardPrinter;
             //card.PrintToPrinter(1, true, 1, 1);

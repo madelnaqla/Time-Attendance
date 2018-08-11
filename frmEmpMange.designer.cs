@@ -30,14 +30,16 @@ namespace Time_Attendance
         {
             this.components = new System.ComponentModel.Container();
             Infragistics.Win.Appearance appearance1 = new Infragistics.Win.Appearance();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmEmpMange));
             Infragistics.Win.Appearance appearance2 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance3 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance4 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance5 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance6 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance7 = new Infragistics.Win.Appearance();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmEmpMange));
             this.grpMain = new Infragistics.Win.Misc.UltraGroupBox();
+            this.glassButton10 = new EnhancedGlassButton.GlassButton();
+            this.glassButton11 = new EnhancedGlassButton.GlassButton();
             this.DTP_STATUS_DATE = new System.Windows.Forms.DateTimePicker();
             this.label16 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
@@ -112,8 +114,6 @@ namespace Time_Attendance
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.sTATUSTableAdapter = new Time_Attendance.TimeAttendanceDataSetTableAdapters.STATUSTableAdapter();
             this.pERMITIONTableAdapter = new Time_Attendance.TimeAttendanceDataSetTableAdapters.PERMITIONTableAdapter();
-            this.glassButton10 = new EnhancedGlassButton.GlassButton();
-            this.glassButton11 = new EnhancedGlassButton.GlassButton();
             ((System.ComponentModel.ISupportInitialize)(this.grpMain)).BeginInit();
             this.grpMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pERMITIONBindingSource)).BeginInit();
@@ -135,10 +135,11 @@ namespace Time_Attendance
             // 
             // grpMain
             // 
-            this.grpMain.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.grpMain.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             appearance1.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
             appearance1.BackColor2 = System.Drawing.SystemColors.InactiveCaptionText;
+            appearance1.BackColorAlpha = Infragistics.Win.Alpha.Opaque;
             appearance1.BackColorDisabled = System.Drawing.SystemColors.InactiveCaptionText;
             appearance1.BackColorDisabled2 = System.Drawing.SystemColors.InactiveCaptionText;
             this.grpMain.Appearance = appearance1;
@@ -181,11 +182,49 @@ namespace Time_Attendance
             this.grpMain.Controls.Add(this.label12);
             this.grpMain.Controls.Add(this.label5);
             this.grpMain.Controls.Add(this.txtJob);
-            this.grpMain.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.grpMain.ForeColor = System.Drawing.SystemColors.Highlight;
             this.grpMain.Location = new System.Drawing.Point(3, 39);
             this.grpMain.Name = "grpMain";
             this.grpMain.Size = new System.Drawing.Size(1147, 294);
             this.grpMain.TabIndex = 0;
+            // 
+            // glassButton10
+            // 
+            this.glassButton10.AnimateGlow = true;
+            this.glassButton10.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.glassButton10.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.glassButton10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.glassButton10.GlowColor = System.Drawing.Color.AliceBlue;
+            this.glassButton10.Image = ((System.Drawing.Image)(resources.GetObject("glassButton10.Image")));
+            this.glassButton10.ImageAlign = System.Drawing.ContentAlignment.TopRight;
+            this.glassButton10.InnerBorderColor = System.Drawing.Color.LightSkyBlue;
+            this.glassButton10.Location = new System.Drawing.Point(950, 240);
+            this.glassButton10.Name = "glassButton10";
+            this.glassButton10.Size = new System.Drawing.Size(115, 24);
+            this.glassButton10.TabIndex = 121;
+            this.glassButton10.Text = "Print Back Old";
+            this.glassButton10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.glassButton10.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.glassButton10.Click += new System.EventHandler(this.glassButton10_Click);
+            // 
+            // glassButton11
+            // 
+            this.glassButton11.AnimateGlow = true;
+            this.glassButton11.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.glassButton11.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.glassButton11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.glassButton11.GlowColor = System.Drawing.Color.AliceBlue;
+            this.glassButton11.Image = ((System.Drawing.Image)(resources.GetObject("glassButton11.Image")));
+            this.glassButton11.ImageAlign = System.Drawing.ContentAlignment.TopRight;
+            this.glassButton11.InnerBorderColor = System.Drawing.Color.LightSkyBlue;
+            this.glassButton11.Location = new System.Drawing.Point(826, 240);
+            this.glassButton11.Name = "glassButton11";
+            this.glassButton11.Size = new System.Drawing.Size(109, 24);
+            this.glassButton11.TabIndex = 120;
+            this.glassButton11.Text = "Print Card Old";
+            this.glassButton11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.glassButton11.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.glassButton11.Click += new System.EventHandler(this.glassButton11_Click);
             // 
             // DTP_STATUS_DATE
             // 
@@ -892,8 +931,8 @@ namespace Time_Attendance
             // 
             // grpNav
             // 
-            this.grpNav.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.grpNav.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.grpNav.Controls.Add(this.lblNavNo);
             this.grpNav.Controls.Add(this.btnLast);
             this.grpNav.Controls.Add(this.btnNext);
@@ -986,9 +1025,9 @@ namespace Time_Attendance
             // 
             // GrdEmployees
             // 
-            this.GrdEmployees.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.GrdEmployees.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             appearance2.BackColor = System.Drawing.Color.White;
             this.GrdEmployees.DisplayLayout.Appearance = appearance2;
             this.GrdEmployees.DisplayLayout.AutoFitStyle = Infragistics.Win.UltraWinGrid.AutoFitStyle.ResizeAllColumns;
@@ -1049,44 +1088,6 @@ namespace Time_Attendance
             // 
             this.pERMITIONTableAdapter.ClearBeforeFill = true;
             // 
-            // glassButton10
-            // 
-            this.glassButton10.AnimateGlow = true;
-            this.glassButton10.BackColor = System.Drawing.Color.PaleTurquoise;
-            this.glassButton10.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.glassButton10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.glassButton10.GlowColor = System.Drawing.Color.AliceBlue;
-            this.glassButton10.Image = ((System.Drawing.Image)(resources.GetObject("glassButton10.Image")));
-            this.glassButton10.ImageAlign = System.Drawing.ContentAlignment.TopRight;
-            this.glassButton10.InnerBorderColor = System.Drawing.Color.LightSkyBlue;
-            this.glassButton10.Location = new System.Drawing.Point(950, 240);
-            this.glassButton10.Name = "glassButton10";
-            this.glassButton10.Size = new System.Drawing.Size(115, 24);
-            this.glassButton10.TabIndex = 121;
-            this.glassButton10.Text = "Print Back Old";
-            this.glassButton10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.glassButton10.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.glassButton10.Click += new System.EventHandler(this.glassButton10_Click);
-            // 
-            // glassButton11
-            // 
-            this.glassButton11.AnimateGlow = true;
-            this.glassButton11.BackColor = System.Drawing.Color.PaleTurquoise;
-            this.glassButton11.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.glassButton11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.glassButton11.GlowColor = System.Drawing.Color.AliceBlue;
-            this.glassButton11.Image = ((System.Drawing.Image)(resources.GetObject("glassButton11.Image")));
-            this.glassButton11.ImageAlign = System.Drawing.ContentAlignment.TopRight;
-            this.glassButton11.InnerBorderColor = System.Drawing.Color.LightSkyBlue;
-            this.glassButton11.Location = new System.Drawing.Point(826, 240);
-            this.glassButton11.Name = "glassButton11";
-            this.glassButton11.Size = new System.Drawing.Size(109, 24);
-            this.glassButton11.TabIndex = 120;
-            this.glassButton11.Text = "Print Card Old";
-            this.glassButton11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.glassButton11.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.glassButton11.Click += new System.EventHandler(this.glassButton11_Click);
-            // 
             // frmEmpMange
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1101,7 +1102,7 @@ namespace Time_Attendance
             this.KeyPreview = true;
             this.MaximizeBox = false;
             this.Name = "frmEmpMange";
-            this.Opacity = 0;
+            this.Opacity = 0D;
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
