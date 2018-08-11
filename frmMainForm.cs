@@ -36,9 +36,8 @@ namespace Time_Attendance
                 string Password = sr.ReadLine();
                 sr.Close();
                 _MasterCon = new SqlConnection("Data Source=" + ServerName + ";Initial Catalog=TimeAttendance;User ID=" + UserName + ";Password=" + Password);
-                //_MasterCon2 = new SqlConnection("Data Source=" + ServerName + ";Initial Catalog=TimeAttendance_MONITOR;User ID=" + UserName + ";Password=" + Password);
-                _MasterCon2 = new SqlConnection("Data Source=" + ServerName + ";Initial Catalog=TimeAttendance;User ID=" + UserName + ";Password=" + Password);
-
+                _MasterCon2 = new SqlConnection("Data Source=" + ServerName + ";Initial Catalog=TimeAttendance_MONITOR;User ID=" + UserName + ";Password=" + Password);
+               
             }
             catch (Exception ex)
             {
