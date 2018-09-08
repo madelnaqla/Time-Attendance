@@ -53,65 +53,67 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
-    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
-    <Reference Include="CrystalDecisions.Shared, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
-    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Enterprise.Framework, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Enterprise.InfoStore, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
     <Reference Include="EnhancedGlassButton, Version=1.0.2628.26427, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\Mohammed Adel\Old\TimeAttendance 12-4-2010\TimeAttendance\TimeAttendance\TimeAttendance\bin\Debug\EnhancedGlassButton.dll</HintPath>
     </Reference>
     <Reference Include="Infragistics4.Shared.v15.1, Version=15.1.20151.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>D:\Program Files\2015.1\Windows Forms\CLR4.0\Bin\Infragistics4.Shared.v15.1.dll</HintPath>
+      <HintPath>..\..\Program Files\2015.1\Windows Forms\CLR4.0\Bin\Infragistics4.Shared.v15.1.dll</HintPath>
     </Reference>
     <Reference Include="Infragistics4.Win.AppStylistSupport.v15.1, Version=15.1.20151.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>D:\Program Files\2015.1\Windows Forms\CLR4.0\Bin\Infragistics4.Win.AppStylistSupport.v15.1.dll</HintPath>
+      <HintPath>..\..\Program Files\2015.1\Windows Forms\CLR4.0\Bin\Infragistics4.Win.AppStylistSupport.v15.1.dll</HintPath>
     </Reference>
     <Reference Include="Infragistics4.Win.Misc.v15.1, Version=15.1.20151.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>D:\Program Files\2015.1\Windows Forms\CLR4.0\Bin\Infragistics4.Win.Misc.v15.1.dll</HintPath>
+      <HintPath>..\..\Program Files\2015.1\Windows Forms\CLR4.0\Bin\Infragistics4.Win.Misc.v15.1.dll</HintPath>
     </Reference>
     <Reference Include="Infragistics4.Win.UltraWinDock.v15.1, Version=15.1.20151.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>D:\Program Files\2015.1\Windows Forms\CLR4.0\Bin\Infragistics4.Win.UltraWinDock.v15.1.dll</HintPath>
+      <HintPath>..\..\Program Files\2015.1\Windows Forms\CLR4.0\Bin\Infragistics4.Win.UltraWinDock.v15.1.dll</HintPath>
     </Reference>
     <Reference Include="Infragistics4.Win.UltraWinEditors.v15.1, Version=15.1.20151.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>D:\Program Files\2015.1\Windows Forms\CLR4.0\Bin\Infragistics4.Win.UltraWinEditors.v15.1.dll</HintPath>
+      <HintPath>..\..\Program Files\2015.1\Windows Forms\CLR4.0\Bin\Infragistics4.Win.UltraWinEditors.v15.1.dll</HintPath>
     </Reference>
     <Reference Include="Infragistics4.Win.UltraWinGrid.v15.1, Version=15.1.20151.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>D:\Program Files\2015.1\Windows Forms\CLR4.0\Bin\Infragistics4.Win.UltraWinGrid.v15.1.dll</HintPath>
+      <HintPath>..\..\Program Files\2015.1\Windows Forms\CLR4.0\Bin\Infragistics4.Win.UltraWinGrid.v15.1.dll</HintPath>
     </Reference>
     <Reference Include="Infragistics4.Win.UltraWinListView.v15.1, Version=15.1.20151.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>D:\Program Files\2015.1\Windows Forms\CLR4.0\Bin\Infragistics4.Win.UltraWinListView.v15.1.dll</HintPath>
+      <HintPath>..\..\Program Files\2015.1\Windows Forms\CLR4.0\Bin\Infragistics4.Win.UltraWinListView.v15.1.dll</HintPath>
     </Reference>
     <Reference Include="Infragistics4.Win.UltraWinSpellChecker.v15.1, Version=15.1.20151.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>D:\Program Files\2015.1\Windows Forms\CLR4.0\Bin\Infragistics4.Win.UltraWinSpellChecker.v15.1.dll</HintPath>
+      <HintPath>..\..\Program Files\2015.1\Windows Forms\CLR4.0\Bin\Infragistics4.Win.UltraWinSpellChecker.v15.1.dll</HintPath>
     </Reference>
     <Reference Include="Infragistics4.Win.UltraWinTabbedMdi.v15.1, Version=15.1.20151.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>D:\Program Files\2015.1\Windows Forms\CLR4.0\Bin\Infragistics4.Win.UltraWinTabbedMdi.v15.1.dll</HintPath>
+      <HintPath>..\..\Program Files\2015.1\Windows Forms\CLR4.0\Bin\Infragistics4.Win.UltraWinTabbedMdi.v15.1.dll</HintPath>
     </Reference>
     <Reference Include="Infragistics4.Win.UltraWinTabControl.v15.1, Version=15.1.20151.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>D:\Program Files\2015.1\Windows Forms\CLR4.0\Bin\Infragistics4.Win.UltraWinTabControl.v15.1.dll</HintPath>
+      <HintPath>..\..\Program Files\2015.1\Windows Forms\CLR4.0\Bin\Infragistics4.Win.UltraWinTabControl.v15.1.dll</HintPath>
     </Reference>
     <Reference Include="Infragistics4.Win.UltraWinToolbars.v15.1, Version=15.1.20151.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>D:\Program Files\2015.1\Windows Forms\CLR4.0\Bin\Infragistics4.Win.UltraWinToolbars.v15.1.dll</HintPath>
+      <HintPath>..\..\Program Files\2015.1\Windows Forms\CLR4.0\Bin\Infragistics4.Win.UltraWinToolbars.v15.1.dll</HintPath>
     </Reference>
     <Reference Include="Infragistics4.Win.UltraWinTree.v15.1, Version=15.1.20151.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>D:\Program Files\2015.1\Windows Forms\CLR4.0\Bin\Infragistics4.Win.UltraWinTree.v15.1.dll</HintPath>
+      <HintPath>..\..\Program Files\2015.1\Windows Forms\CLR4.0\Bin\Infragistics4.Win.UltraWinTree.v15.1.dll</HintPath>
     </Reference>
     <Reference Include="Infragistics4.Win.v15.1, Version=15.1.20151.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>D:\Program Files\2015.1\Windows Forms\CLR4.0\Bin\Infragistics4.Win.v15.1.dll</HintPath>
+      <HintPath>..\..\Program Files\2015.1\Windows Forms\CLR4.0\Bin\Infragistics4.Win.v15.1.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.SqlServer.Rmo, Version=9.0.242.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
     <Reference Include="System" />
@@ -569,7 +571,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <None Include="app.config" />
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

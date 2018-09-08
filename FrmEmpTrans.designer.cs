@@ -51,6 +51,7 @@ namespace Time_Attendance
             this.BtnPrintPreview = new EnhancedGlassButton.GlassButton();
             this.btnExit = new EnhancedGlassButton.GlassButton();
             this.grpMain = new Infragistics.Win.Misc.UltraGroupBox();
+            this.clb_company = new System.Windows.Forms.CheckedListBox();
             this.checkBox_error = new System.Windows.Forms.CheckBox();
             this.button1 = new System.Windows.Forms.Button();
             this.label14 = new System.Windows.Forms.Label();
@@ -100,7 +101,6 @@ namespace Time_Attendance
             this.ultraGrid1 = new Infragistics.Win.UltraWinGrid.UltraGrid();
             this.depTableAdapter = new Time_Attendance.TimeAttendanceDataSetTableAdapters.DepTableAdapter();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
-            this.clb_company = new System.Windows.Forms.CheckedListBox();
             ((System.ComponentModel.ISupportInitialize)(this.ultraGroupBox1)).BeginInit();
             this.ultraGroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grpMain)).BeginInit();
@@ -114,8 +114,8 @@ namespace Time_Attendance
             // 
             // ultraGroupBox1
             // 
-            this.ultraGroupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.ultraGroupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.ultraGroupBox1.Controls.Add(this.glassButton5);
             this.ultraGroupBox1.Controls.Add(this.TXT_PATH);
             this.ultraGroupBox1.Controls.Add(this.glassButton4);
@@ -340,8 +340,8 @@ namespace Time_Attendance
             // 
             // grpMain
             // 
-            this.grpMain.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.grpMain.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.grpMain.Controls.Add(this.clb_company);
             this.grpMain.Controls.Add(this.checkBox_error);
             this.grpMain.Controls.Add(this.button1);
@@ -382,6 +382,24 @@ namespace Time_Attendance
             this.grpMain.Size = new System.Drawing.Size(1116, 209);
             this.grpMain.TabIndex = 24;
             this.grpMain.ViewStyle = Infragistics.Win.Misc.GroupBoxViewStyle.Office2007;
+            // 
+            // clb_company
+            // 
+            this.clb_company.CheckOnClick = true;
+            this.clb_company.FormattingEnabled = true;
+            this.clb_company.Items.AddRange(new object[] {
+            "BP",
+            "EPSCO",
+            "IBS",
+            "Other..",
+            "PhPC"});
+            this.clb_company.Location = new System.Drawing.Point(153, 123);
+            this.clb_company.Name = "clb_company";
+            this.clb_company.ScrollAlwaysVisible = true;
+            this.clb_company.Size = new System.Drawing.Size(121, 79);
+            this.clb_company.Sorted = true;
+            this.clb_company.TabIndex = 132;
+            this.clb_company.ThreeDCheckBoxes = true;
             // 
             // checkBox_error
             // 
@@ -732,8 +750,8 @@ namespace Time_Attendance
             // 
             // grpNav
             // 
-            this.grpNav.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.grpNav.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.grpNav.Controls.Add(this.txtToTime);
             this.grpNav.Controls.Add(this.label3);
             this.grpNav.Controls.Add(this.txtfromTime);
@@ -908,9 +926,9 @@ namespace Time_Attendance
             // 
             // ultraGrid1
             // 
-            this.ultraGrid1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.ultraGrid1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             appearance1.BackColor = System.Drawing.Color.White;
             this.ultraGrid1.DisplayLayout.Appearance = appearance1;
             this.ultraGrid1.DisplayLayout.AutoFitStyle = Infragistics.Win.UltraWinGrid.AutoFitStyle.ResizeAllColumns;
@@ -953,24 +971,6 @@ namespace Time_Attendance
             // depTableAdapter
             // 
             this.depTableAdapter.ClearBeforeFill = true;
-            // 
-            // clb_company
-            // 
-            this.clb_company.CheckOnClick = true;
-            this.clb_company.FormattingEnabled = true;
-            this.clb_company.Items.AddRange(new object[] {
-            "BP",
-            "EPSCO",
-            "IBS",
-            "Other..",
-            "PhPC"});
-            this.clb_company.Location = new System.Drawing.Point(153, 123);
-            this.clb_company.Name = "clb_company";
-            this.clb_company.ScrollAlwaysVisible = true;
-            this.clb_company.Size = new System.Drawing.Size(121, 79);
-            this.clb_company.Sorted = true;
-            this.clb_company.TabIndex = 132;
-            this.clb_company.ThreeDCheckBoxes = true;
             // 
             // FrmEmpTrans
             // 
