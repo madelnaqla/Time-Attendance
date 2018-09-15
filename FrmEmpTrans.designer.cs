@@ -101,6 +101,7 @@ namespace Time_Attendance
             this.ultraGrid1 = new Infragistics.Win.UltraWinGrid.UltraGrid();
             this.depTableAdapter = new Time_Attendance.TimeAttendanceDataSetTableAdapters.DepTableAdapter();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
+            this.checkBox_AllDays = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.ultraGroupBox1)).BeginInit();
             this.ultraGroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grpMain)).BeginInit();
@@ -342,6 +343,7 @@ namespace Time_Attendance
             // 
             this.grpMain.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.grpMain.Controls.Add(this.checkBox_AllDays);
             this.grpMain.Controls.Add(this.clb_company);
             this.grpMain.Controls.Add(this.checkBox_error);
             this.grpMain.Controls.Add(this.button1);
@@ -740,7 +742,7 @@ namespace Time_Attendance
             // 
             // btnFind
             // 
-            this.btnFind.Location = new System.Drawing.Point(624, 152);
+            this.btnFind.Location = new System.Drawing.Point(624, 179);
             this.btnFind.Name = "btnFind";
             this.btnFind.Size = new System.Drawing.Size(75, 23);
             this.btnFind.TabIndex = 97;
@@ -972,6 +974,18 @@ namespace Time_Attendance
             // 
             this.depTableAdapter.ClearBeforeFill = true;
             // 
+            // checkBox_AllDays
+            // 
+            this.checkBox_AllDays.AutoSize = true;
+            this.checkBox_AllDays.BackColor = System.Drawing.Color.Transparent;
+            this.checkBox_AllDays.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
+            this.checkBox_AllDays.Location = new System.Drawing.Point(624, 152);
+            this.checkBox_AllDays.Name = "checkBox_AllDays";
+            this.checkBox_AllDays.Size = new System.Drawing.Size(71, 17);
+            this.checkBox_AllDays.TabIndex = 133;
+            this.checkBox_AllDays.Text = "All Days";
+            this.checkBox_AllDays.UseVisualStyleBackColor = false;
+            // 
             // FrmEmpTrans
             // 
             this.AcceptButton = this.btnFind;
@@ -1068,5 +1082,6 @@ namespace Time_Attendance
         private EnhancedGlassButton.GlassButton glassButton5;
         private System.Windows.Forms.CheckBox checkBox_error;
         private System.Windows.Forms.CheckedListBox clb_company;
+        private System.Windows.Forms.CheckBox checkBox_AllDays;
     }
 }

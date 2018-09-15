@@ -533,11 +533,11 @@ namespace Time_Attendance
                     {
                         _cmd.CommandText = "select CARD,NAME,JOB,Department,DATE,[ENT DATE],[Enter Time],ext_date ,[Exit Time],[WORK HOURS],[Location],[Company] from xx as VSHIFT_FINAL " + FilterString + " order by [DATE],[name] ";
                         Str = "select CARD,NAME,JOB,Department,DATE,[ENT DATE],[Enter Time],ext_date,[Exit Time],[WORK HOURS],[Location],[Company] from xx as VSHIFT_FINAL " + FilterString;
-                        Str2 = "Select * from xx as VSHIFT_FINAL " + FilterString;                                    
+                        Str2 = "Select * from xx as VSHIFT_FINAL " + FilterString;
                     }
-                    
+
                     //Str3 = "select CARD,NAME,JOB,Department,DATE,[ENT DATE],[Enter Time],ext_date,[Exit Time],[WORK HOURS],[Location],[Company] into xx from VSHIFT_FINAL " + FilterString;
-                    
+
 
                     /*_cmd.CommandText = "select CARD,NAME,JOB,Department,DATE,[ENT DATE],[Enter Time],ext_date ,[Exit Time],[WORK HOURS],[Location],[Company] from VSHIFT_FINAL " + FilterString + " order by [DATE],[name] ";
                     Str = "select CARD,NAME,JOB,Department,DATE,[ENT DATE],[Enter Time],ext_date,[Exit Time],[WORK HOURS],[Location],[Company] from VSHIFT_FINAL " + FilterString;
@@ -545,6 +545,47 @@ namespace Time_Attendance
                     Str3 = "select CARD,NAME,JOB,Department,DATE,[ENT DATE],[Enter Time],ext_date,[Exit Time],[WORK HOURS],[Location],[Company] into xx from VSHIFT_FINAL " + FilterString;
                      * */
 
+                }
+                /** 
+                 * By Mohammed adel*/
+                else if (checkBox_AllDays.Checked)
+                {
+                    Str3 = "select CARD,NAME,JOB,Department,DATE,[ENT DATE],[Enter Time],ext_date,[Exit Time],[WORK HOURS],[Location],[Company], IN_MACHINE, OUT_MACHINE  from VTransaction_IN_OUT_FINAL_AllDay " + FilterString;
+
+                    //_cmd = new SqlCommand("drop table xx", frmMainForm._MasterCon);
+                    //_cmd.CommandTimeout = 2000;
+                    //frmMainForm._MasterCon.Open();
+                    //try
+                    //{
+                    //    _cmd.ExecuteNonQuery();
+                    //}
+                    //catch { }
+                    //frmMainForm._MasterCon.Close();
+
+                    _cmd = new SqlCommand(Str3, frmMainForm._MasterCon);
+                    _cmd.CommandTimeout = 2000;
+                    frmMainForm._MasterCon.Open();
+                    _cmd.ExecuteNonQuery();
+                    frmMainForm._MasterCon.Close();
+                    Str = "select CARD,NAME,JOB,Department,DATE,[ENT DATE],[Enter Time],ext_date,[Exit Time],[WORK HOURS],[Location],[Company], IN_MACHINE, OUT_MACHINE  from VTransaction_IN_OUT_FINAL_AllDay " + FilterString;
+
+                    /*if (checkBox_error.Checked)
+                    {
+                        _cmd.CommandText = "SELECT * FROM (select CARD,NAME,JOB,Department,DATE,[ENT DATE],[Enter Time],ext_date,[Exit Time],[WORK HOURS],[Location],[Company], IN_MACHINE, OUT_MACHINE  from xx as VTransaction_IN_OUT_FINAL " + FilterString + ")  AS VTransaction_IN_OUT_FINAL  WHERE [Enter Time] IS NULL  OR [Exit Time] IS NULL    order by [DATE],[name] ";
+                        Str = " SELECT * FROM (select CARD,NAME,JOB,Department,DATE,[ENT DATE],[Enter Time],ext_date,[Exit Time],[WORK HOURS],[Location],[Company], IN_MACHINE, OUT_MACHINE  from xx as VTransaction_IN_OUT_FINAL " + FilterString + ")  AS VTransaction_IN_OUT_FINAL  WHERE [Enter Time] IS NULL  OR [Exit Time] IS NULL    ";
+                        Str2 = " SELECT * FROM (Select * from  xx as VTransaction_IN_OUT_FINAL " + FilterString + ")  AS VTransaction_IN_OUT_FINAL  WHERE [ENT DATE] IS NULL OR [Enter Time] IS NULL ";
+                    }
+                    else
+                    {
+                        _cmd.CommandText = "select CARD,NAME,JOB,Department,DATE,[ENT DATE],[Enter Time],ext_date,[Exit Time],[WORK HOURS],[Location],[Company], IN_MACHINE, OUT_MACHINE  from xx as VTransaction_IN_OUT_FINAL " + FilterString + " order by [DATE],[name] ";
+                        Str = "select CARD,NAME,JOB,Department,DATE,[ENT DATE],[Enter Time],ext_date,[Exit Time],[WORK HOURS],[Location],[Company], IN_MACHINE, OUT_MACHINE  from xx as VTransaction_IN_OUT_FINAL " + FilterString;
+                        Str2 = "Select * from  xx as VTransaction_IN_OUT_FINAL " + FilterString;
+                    }*/
+
+                    /*_cmd.CommandText = "select CARD,NAME,JOB,Department,DATE,[ENT DATE],[Enter Time],ext_date,[Exit Time],[WORK HOURS],[Location],[Company], IN_MACHINE, OUT_MACHINE  from VTransaction_IN_OUT_FINAL " + FilterString + " order by [DATE],[name] ";
+                    Str = "select CARD,NAME,JOB,Department,DATE,[ENT DATE],[Enter Time],ext_date,[Exit Time],[WORK HOURS],[Location],[Company], IN_MACHINE, OUT_MACHINE  from VTransaction_IN_OUT_FINAL " + FilterString;
+                    Str2 = "Select * from VTransaction_IN_OUT_FINAL " + FilterString;
+                    Str3 = "select CARD,NAME,JOB,Department,DATE,[ENT DATE],[Enter Time],ext_date,[Exit Time],[WORK HOURS],[Location],[Company], IN_MACHINE, OUT_MACHINE  into xx from VTransaction_IN_OUT_FINAL " + FilterString;*/
                 }
                 else
                 {
@@ -577,7 +618,7 @@ namespace Time_Attendance
                         Str = "select CARD,NAME,JOB,Department,DATE,[ENT DATE],[Enter Time],ext_date,[Exit Time],[WORK HOURS],[Location],[Company], IN_MACHINE, OUT_MACHINE  from xx as VTransaction_IN_OUT_FINAL " + FilterString;
                         Str2 = "Select * from  xx as VTransaction_IN_OUT_FINAL " + FilterString;
                     }
-                    
+
                     /*_cmd.CommandText = "select CARD,NAME,JOB,Department,DATE,[ENT DATE],[Enter Time],ext_date,[Exit Time],[WORK HOURS],[Location],[Company], IN_MACHINE, OUT_MACHINE  from VTransaction_IN_OUT_FINAL " + FilterString + " order by [DATE],[name] ";
                     Str = "select CARD,NAME,JOB,Department,DATE,[ENT DATE],[Enter Time],ext_date,[Exit Time],[WORK HOURS],[Location],[Company], IN_MACHINE, OUT_MACHINE  from VTransaction_IN_OUT_FINAL " + FilterString;
                     Str2 = "Select * from VTransaction_IN_OUT_FINAL " + FilterString;
@@ -802,7 +843,7 @@ namespace Time_Attendance
                 EmpSHIFTTransRpt.SetParameterValue(EmpSHIFTTransRpt.Parameter_To.ParameterFieldName, dtpDateTo.Text);
                 Viewer.crystalReportViewer1.ReportSource = EmpSHIFTTransRpt;
             }
-            else
+            else if (checkBox_AllDays.Checked)
             {
                 EmpTransRpt EmpTransRpt = new EmpTransRpt();
                 EmpTransRpt.Database.Tables["VTransaction_IN_OUT_FINAL"].SetDataSource(_Dt);
@@ -815,6 +856,19 @@ namespace Time_Attendance
                 EmpTransRpt.SetParameterValue(EmpTransRpt.Parameter_service_start.ParameterFieldName, maskedTextBox5.Text);
                 EmpTransRpt.SetParameterValue(EmpTransRpt.Parameter_service_end.ParameterFieldName, maskedTextBox6.Text);
                 Viewer.crystalReportViewer1.ReportSource = EmpTransRpt;
+            }
+            {
+                EmpTransAllDays EmpTransAllRpt = new EmpTransAllDays();
+                EmpTransAllRpt.Database.Tables["VTransaction_IN_OUT_FINAL_AllDay"].SetDataSource(_Dt);
+                EmpTransAllRpt.SetParameterValue(EmpTransAllRpt.Parameter_From.ParameterFieldName, dtpDateFrom.Text);
+                EmpTransAllRpt.SetParameterValue(EmpTransAllRpt.Parameter_To.ParameterFieldName, dtpDateTo.Text);
+                EmpTransAllRpt.SetParameterValue(EmpTransAllRpt.Parameter_ca_start.ParameterFieldName, maskedTextBox1.Text);
+                EmpTransAllRpt.SetParameterValue(EmpTransAllRpt.Parameter_ca_end.ParameterFieldName, maskedTextBox2.Text);
+                EmpTransAllRpt.SetParameterValue(EmpTransAllRpt.Parameter_ps_start.ParameterFieldName, maskedTextBox3.Text);
+                EmpTransAllRpt.SetParameterValue(EmpTransAllRpt.Parameter_ps_end.ParameterFieldName, maskedTextBox4.Text);
+                EmpTransAllRpt.SetParameterValue(EmpTransAllRpt.Parameter_service_start.ParameterFieldName, maskedTextBox5.Text);
+                EmpTransAllRpt.SetParameterValue(EmpTransAllRpt.Parameter_service_end.ParameterFieldName, maskedTextBox6.Text);
+                Viewer.crystalReportViewer1.ReportSource = EmpTransAllRpt;
             }
             Viewer.ShowDialog();
         }

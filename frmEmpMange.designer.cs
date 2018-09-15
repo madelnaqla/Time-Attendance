@@ -537,7 +537,7 @@ namespace Time_Attendance
             this.cmbLocation.FormattingEnabled = true;
             this.cmbLocation.Items.AddRange(new object[] {
             "Cairo",
-            "Port Said"});
+            "Portsaid"});
             this.cmbLocation.Location = new System.Drawing.Point(95, 13);
             this.cmbLocation.Name = "cmbLocation";
             this.cmbLocation.Size = new System.Drawing.Size(121, 21);

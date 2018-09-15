@@ -103,8 +103,8 @@ namespace Time_Attendance
             // 
             // ultraGroupBox1
             // 
-            this.ultraGroupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.ultraGroupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.ultraGroupBox1.Controls.Add(this.glassButton3);
             this.ultraGroupBox1.Controls.Add(this.glassButton2);
             this.ultraGroupBox1.Controls.Add(this.glassButton1);
@@ -286,8 +286,8 @@ namespace Time_Attendance
             // 
             // grpMain
             // 
-            this.grpMain.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.grpMain.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.grpMain.Controls.Add(this.txt_num);
             this.grpMain.Controls.Add(this.txt_name);
             this.grpMain.Controls.Add(this.label9);
@@ -433,8 +433,8 @@ namespace Time_Attendance
             // 
             // ultraGroupBox2
             // 
-            this.ultraGroupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.ultraGroupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.ultraGroupBox2.Controls.Add(this.button1);
             this.ultraGroupBox2.Controls.Add(this.cbVisitor);
             this.ultraGroupBox2.Controls.Add(this.label7);
@@ -526,7 +526,7 @@ namespace Time_Attendance
             this.cmbLocation.Items.AddRange(new object[] {
             "",
             "Cairo",
-            "Port Said"});
+            "Portsaid"});
             this.cmbLocation.Location = new System.Drawing.Point(542, 12);
             this.cmbLocation.Name = "cmbLocation";
             this.cmbLocation.Size = new System.Drawing.Size(121, 21);
@@ -591,8 +591,8 @@ namespace Time_Attendance
             // 
             // grpNav
             // 
-            this.grpNav.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.grpNav.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.grpNav.Controls.Add(this.button2);
             this.grpNav.Controls.Add(this.txtToTime);
             this.grpNav.Controls.Add(this.label3);
@@ -769,9 +769,9 @@ namespace Time_Attendance
             // 
             // ultraGrid1
             // 
-            this.ultraGrid1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.ultraGrid1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             appearance1.BackColor = System.Drawing.Color.White;
             this.ultraGrid1.DisplayLayout.Appearance = appearance1;
             this.ultraGrid1.DisplayLayout.AutoFitStyle = Infragistics.Win.UltraWinGrid.AutoFitStyle.ResizeAllColumns;
