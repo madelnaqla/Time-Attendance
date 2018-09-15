@@ -164,12 +164,6 @@
     <Compile Include="ADD_LOG.Designer.cs">
       <DependentUpon>ADD_LOG.cs</DependentUpon>
     </Compile>
-    <Compile Include="EmpTransAllDays.cs">
-      <DependentUpon>EmpTransAllDays.rpt</DependentUpon>
-      <AutoGen>True</AutoGen>
-      <SubType>Component</SubType>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <Compile Include="rptCardBack_PS.cs">
       <DependentUpon>rptCardBack_PS.rpt</DependentUpon>
       <AutoGen>True</AutoGen>
@@ -420,10 +414,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ADD_LOG.resx">
       <DependentUpon>ADD_LOG.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="EmpTransAllDays.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>EmpTransAllDays.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="rptCardBack_PS.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
