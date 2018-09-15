@@ -845,21 +845,22 @@ namespace Time_Attendance
             }
             else if (checkBox_AllDays.Checked)
             {
-                EmpTransRpt EmpTransRpt = new EmpTransRpt();
-                EmpTransRpt.Database.Tables["VTransaction_IN_OUT_FINAL"].SetDataSource(_Dt);
-                EmpTransRpt.SetParameterValue(EmpTransRpt.Parameter_From.ParameterFieldName, dtpDateFrom.Text);
-                EmpTransRpt.SetParameterValue(EmpTransRpt.Parameter_To.ParameterFieldName, dtpDateTo.Text);
-                EmpTransRpt.SetParameterValue(EmpTransRpt.Parameter_ca_start.ParameterFieldName, maskedTextBox1.Text);
-                EmpTransRpt.SetParameterValue(EmpTransRpt.Parameter_ca_end.ParameterFieldName, maskedTextBox2.Text);
-                EmpTransRpt.SetParameterValue(EmpTransRpt.Parameter_ps_start.ParameterFieldName, maskedTextBox3.Text);
-                EmpTransRpt.SetParameterValue(EmpTransRpt.Parameter_ps_end.ParameterFieldName, maskedTextBox4.Text);
-                EmpTransRpt.SetParameterValue(EmpTransRpt.Parameter_service_start.ParameterFieldName, maskedTextBox5.Text);
-                EmpTransRpt.SetParameterValue(EmpTransRpt.Parameter_service_end.ParameterFieldName, maskedTextBox6.Text);
-                Viewer.crystalReportViewer1.ReportSource = EmpTransRpt;
-            }
-            {
                 EmpTransAllDays EmpTransAllRpt = new EmpTransAllDays();
-                EmpTransAllRpt.Database.Tables["VTransaction_IN_OUT_FINAL_AllDay"].SetDataSource(_Dt);
+                EmpTransAllRpt.Database.Tables["VTransaction_IN_OUT_FINAL"].SetDataSource(_Dt);
+                EmpTransAllRpt.SetParameterValue(EmpTransAllRpt.Parameter_From.ParameterFieldName, dtpDateFrom.Text);
+                EmpTransAllRpt.SetParameterValue(EmpTransAllRpt.Parameter_To.ParameterFieldName, dtpDateTo.Text);
+                EmpTransAllRpt.SetParameterValue(EmpTransAllRpt.Parameter_ca_start.ParameterFieldName, maskedTextBox1.Text);
+                EmpTransAllRpt.SetParameterValue(EmpTransAllRpt.Parameter_ca_end.ParameterFieldName, maskedTextBox2.Text);
+                EmpTransAllRpt.SetParameterValue(EmpTransAllRpt.Parameter_ps_start.ParameterFieldName, maskedTextBox3.Text);
+                EmpTransAllRpt.SetParameterValue(EmpTransAllRpt.Parameter_ps_end.ParameterFieldName, maskedTextBox4.Text);
+                EmpTransAllRpt.SetParameterValue(EmpTransAllRpt.Parameter_service_start.ParameterFieldName, maskedTextBox5.Text);
+                EmpTransAllRpt.SetParameterValue(EmpTransAllRpt.Parameter_service_end.ParameterFieldName, maskedTextBox6.Text);
+                Viewer.crystalReportViewer1.ReportSource = EmpTransAllRpt;
+            }
+            else
+            {
+                EmpTransRpt EmpTransAllRpt = new EmpTransRpt();
+                EmpTransAllRpt.Database.Tables["VTransaction_IN_OUT_FINAL"].SetDataSource(_Dt);
                 EmpTransAllRpt.SetParameterValue(EmpTransAllRpt.Parameter_From.ParameterFieldName, dtpDateFrom.Text);
                 EmpTransAllRpt.SetParameterValue(EmpTransAllRpt.Parameter_To.ParameterFieldName, dtpDateTo.Text);
                 EmpTransAllRpt.SetParameterValue(EmpTransAllRpt.Parameter_ca_start.ParameterFieldName, maskedTextBox1.Text);
